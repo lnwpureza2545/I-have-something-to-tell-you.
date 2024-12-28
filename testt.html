@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ฟิล์ม, เพียวมีอะไรอยากบอก</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #ffe4e1;
+      color: #333;
+      padding: 20px;
+      background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/281/red-heart_2764-fe0f.png');
+      background-repeat: repeat;
+      background-size: 50px 50px;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff69b4;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease-out;
+    }
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    button.yes {
+      background-color: #ff1493;
+      color: white;
+    }
+    button.yes:hover {
+      background-color: #ff85c2;
+      transform: scale(1.1);
+    }
+    button.not_sure {
+      background-color: #ffd700;
+      color: white;
+    }
+    button.not_sure:hover {
+      background-color: #ffdd75;
+      transform: scale(1.1);
+    }
+    button.no {
+      background-color: #c0c0c0;
+      color: white;
+    }
+    button.no:hover {
+      background-color: #dcdcdc;
+      transform: scale(1.1);
+    }
+    
+    /* Container สำหรับรูปภาพเรียงกันแนวนอน */
+    .image-container {
+      display: flex;
+      justify-content: center; /* จัดให้ภาพอยู่ตรงกลาง */
+      gap: 20px; /* ระยะห่างระหว่างรูป */
+      margin: 20px 0;
+    }
+    img {
+      width: 200px; /* ขนาดรูปภาพ */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: rotate(5deg);
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ฟิล์ม, เพียวมีอะไรอยากบอก...</h1>
+  <p>ช่วงนี้เราได้คุยกันบ่อยขึ้น เพียวรู้สึกดีทุกครั้งที่ได้อยู่ใกล้ฟิล์ม ❤️</p>
+  <p>เพียวอยากรู้ว่าฟิล์มรู้สึกเหมือนกันหรือเปล่า?</p>
+  <p>เราอยากลองพัฒนาความสัมพันธ์ไปมากกว่านี้มั้ย...</p>
+
+  <!-- Container สำหรับรูปภาพเรียงกันแนวนอน -->
+  <div class="image-container">
+    <img src="20241123_163102 resize.jpg" style="width: 15%; height: auto;" alt="รูปภาพ 1">
+    <img src="Pic2.jpg" style="width: 15%; height: auto;" alt="รูปภาพ 2">
+  </div>
+
+  <button class="yes" onclick="positiveResponse()">รู้สึกดีเหมือนกัน</button>
+  <button class="not_sure" onclick="unsureResponse()">ยังไม่แน่ใจ</button>
+  <button class="no" onclick="negativeResponse()">ยังไม่พร้อม</button>
+
+  <script>
+    function positiveResponse() {
+      let response = confirm("จริงหรออ! ถ้างั้นเรามาลองพัฒนาความสัมพันธ์กันดีไหม?");
+      if (response) {
+        alert("เย้ยยย ดีใจมากเยยยย!✨");
+      } else {
+        alert("โอเคครับ เพียวพร้อมรอฟิล์มเสมอนะ!");
+      }
+    }
+
+    function unsureResponse() {
+      alert("ไม่เป็นไรเลยครับ 😊 เพียวเข้าใจว่าความรู้สึกต้องใช้เวลา ฟิล์มค่อย ๆ คิดนะ แล้วเพียวรอฟังเสมอ!");
+    }
+
+    function negativeResponse() {
+      alert("โอเคครับบ เพียวจะปรับปรุงตัวเองให้ดีขึ้น ถ้าเพียวต้องปรับอะไรตรงไหนบอกได้เลยนะ ❤️");
+    }
+  </script>
+</body>
+</html>
